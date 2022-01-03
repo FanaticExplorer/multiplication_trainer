@@ -8,16 +8,17 @@ window.title('Таблица умножения - Тренажер')
 
 
 def start():
+    global score_int
     start_button.pack_forget()
     check_button.pack()
     score.pack()
+    score_int=0
     make()
 
 def make():
     global first_int
     global second_int
     global score_int
-    score_int=0
     first_int=random.randint(1,10)
     second_int=random.randint(1,10)
     condition.configure(text=f"{first_int}*{second_int}")
